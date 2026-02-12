@@ -4,49 +4,55 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0c1424;
+  color: #fff;
 }
 
+/* NAVBAR */
 .navbar {
-  background: #1e293b;
-  padding: 18px;
+  background: #182235;
+  padding: 20px;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
+/* CONTAINER */
 .container {
   padding: 20px;
-  max-width: 500px;
+  max-width: 520px;
   margin: auto;
 }
 
+/* CARD */
 .card {
-  background: #1e293b;
-  border-radius: 16px;
+  background: #1b263b;
+  border-radius: 20px;
   padding: 25px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
 
+/* PRICE */
 .price-title {
-  font-size: 18px;
-  color: #cbd5e1;
+  font-size: 16px;
+  color: #94a3b8;
 }
 
 .price {
   font-size: 38px;
-  font-weight: bold;
+  font-weight: 700;
   margin: 10px 0;
 }
 
 .domain-box {
   background: #2d3a55;
   padding: 12px;
-  border-radius: 10px;
+  border-radius: 12px;
   margin: 15px 0;
+  color: #e2e8f0;
 }
 
+/* LIST */
 ul {
   list-style: none;
   padding: 0;
@@ -56,10 +62,11 @@ ul li {
   margin: 10px 0;
 }
 
+/* BUTTON */
 button {
   width: 100%;
   padding: 14px;
-  border-radius: 10px;
+  border-radius: 14px;
   border: none;
   font-weight: bold;
   font-size: 15px;
@@ -72,14 +79,28 @@ button {
 }
 
 .btn-primary {
-  background: #2563eb;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
   color: white;
+}
+
+/* FORM */
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.form-box {
+  background: #1b263b;
+  padding: 20px;
+  border-radius: 18px;
+  margin-bottom: 20px;
 }
 
 input, textarea {
   width: 100%;
-  padding: 12px;
-  border-radius: 10px;
+  padding: 14px;
+  border-radius: 14px;
   border: none;
   margin: 10px 0 18px 0;
   background: #2d3a55;
@@ -87,27 +108,42 @@ input, textarea {
   font-size: 14px;
 }
 
-.section-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.form-box {
-  background: #1e293b;
-  padding: 18px;
-  border-radius: 14px;
-  margin-bottom: 20px;
-}
-
-.blue-box {
-  border: 1px solid #2563eb;
-  padding: 18px;
-  border-radius: 14px;
-  margin-bottom: 20px;
-}
-
 textarea {
   resize: none;
-  height: 80px;
+  height: 90px;
+}
+
+/* BLUE CONFIG BOX */
+.blue-box {
+  border: 2px solid #2563eb;
+  padding: 20px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  background: #111827;
+}
+
+/* SUBDOMAIN GROUP */
+.subdomain-group {
+  display: flex;
+  align-items: center;
+  background: #1f2937;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 10px 0 20px 0;
+}
+
+.subdomain-group input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+}
+
+.subdomain-group span {
+  background: #374151;
+  padding: 14px;
+  font-size: 14px;
+  color: #cbd5e1;
   }
