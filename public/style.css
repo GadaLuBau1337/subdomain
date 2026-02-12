@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+.navbar {
+  background: #1e293b;
+  padding: 18px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.container {
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+.price-title {
+  font-size: 18px;
+  color: #cbd5e1;
+}
+
+.price {
+  font-size: 38px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.domain-box {
+  background: #2d3a55;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-dark {
+  background: black;
+  color: white;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px 0 18px 0;
+  background: #2d3a55;
+  color: white;
+  font-size: 14px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-box {
+  background: #1e293b;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.blue-box {
+  border: 1px solid #2563eb;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+  }
