@@ -31,8 +31,15 @@
   <div class="blue-box">
     <b>Konfigurasi Subdomain</b>
 
-    <input type="text" id="sub" placeholder="Nama Subdomain (contoh: client1) *">
-    <input type="text" id="target" placeholder="Target IP atau Domain *">
+    <label style="font-size:13px;color:#94a3b8;">Nama Subdomain *</label>
+
+    <div class="subdomain-group">
+      <input type="text" id="sub" placeholder="contoh: client1">
+      <span>.vealo.tech</span>
+    </div>
+
+    <label style="font-size:13px;color:#94a3b8;">Target (IP atau Domain) *</label>
+    <input type="text" id="target" placeholder="Contoh: 192.168.1.1 atau domain.com">
   </div>
 
   <textarea id="catatan" placeholder="Catatan Tambahan (Opsional)"></textarea>
@@ -61,17 +68,14 @@ function order() {
     return;
   }
 
-  const domain = "vealo.tech";
-  const harga = "Rp 500 / bulan";
-
   const pesan = 
 `Halo SeptaCloud 👋
 
 Saya ingin memesan Subdomain:
 
 📦 Layanan: SUBDOMAIN #1
-💰 Harga: ${harga}
-🌐 Subdomain: ${sub}.${domain}
+💰 Harga: Rp 500 / bulan
+🌐 Subdomain: ${sub}.vealo.tech
 🎯 Target: ${target}
 
 👤 Nama: ${nama}
