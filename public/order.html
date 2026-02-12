@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pesan Layanan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">SeptaCloud</div>
+
+<div class="container">
+
+  <div class="section-title">Pesan Layanan</div>
+
+  <div class="form-box">
+    <b>Detail Layanan</b>
+    <p>Nama Layanan: <b>SUBDOMAIN #1</b></p>
+    <p>Harga: <b>Rp 500 / bulan</b></p>
+    <p>Domain: <b>vealo.tech</b></p>
+  </div>
+
+  <div class="form-box">
+    <b>Informasi Pemesanan</b>
+
+    <input type="text" id="nama" placeholder="Nama Lengkap *">
+    <input type="email" id="email" placeholder="Email *">
+    <input type="text" id="wa" placeholder="Nomor WhatsApp *">
+  </div>
+
+  <div class="blue-box">
+    <b>Konfigurasi Subdomain</b>
+
+    <input type="text" id="sub" placeholder="Nama Subdomain (contoh: client1) *">
+    <input type="text" id="target" placeholder="Target IP atau Domain *">
+  </div>
+
+  <textarea id="catatan" placeholder="Catatan Tambahan (Opsional)"></textarea>
+
+  <button class="btn-primary" onclick="order()">Pesan Sekarang</button>
+
+</div>
+
+<script>
+function order() {
+
+  const nama = document.getElementById("nama").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const wa = document.getElementById("wa").value.trim();
+  const sub = document.getElementById("sub").value.trim().toLowerCase();
+  const target = document.getElementById("target").value.trim();
+  const catatan = document.getElementById("catatan").value.trim();
+
+  if (!nama || !email || !wa || !sub || !target) {
+    alert("Harap isi semua data wajib!");
+    return;
+  }
+
+  if (!/^[a-z0-9-]+$/.test(sub)) {
+    alert("Subdomain hanya boleh huruf kecil, angka, dan tanda -");
+    return;
+  }
+
+  const domain = "vealo.tech";
+  const harga = "Rp 500 / bulan";
+
+  const pesan = 
+`Halo SeptaCloud 👋
+
+Saya ingin memesan Subdomain:
+
+📦 Layanan: SUBDOMAIN #1
+💰 Harga: ${harga}
+🌐 Subdomain: ${sub}.${domain}
+🎯 Target: ${target}
+
+👤 Nama: ${nama}
+📧 Email: ${email}
+📱 WhatsApp: ${wa}
+
+📝 Catatan:
+${catatan || "-"}
+
+Mohon diproses ya 🙏`;
+
+  const nomor = "6283114593730";
+  const encoded = encodeURIComponent(pesan);
+
+  window.location.href = `https://wa.me/${nomor}?text=${encoded}`;
+}
+</script>
+
+</body>
+</html>
